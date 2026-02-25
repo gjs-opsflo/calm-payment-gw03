@@ -1,0 +1,5 @@
+format: cyclonedx-json
+output: sbom.json
+platform: linux/amd64
+scope: all-layers
+artifact-input: .
