@@ -27,6 +27,12 @@
               "requirement-url": "https://www.pcisecuritystandards.org/document_library?category=pcidss&document=pci_dss"
             }
           ]
+        },
+        "secure-configuration-management": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Critical for reducing attack surface and maintaining system integrity."
+        },
+        "web-application-firewall": {
+          "description": "Addresses PCI-DSS 4.0 Req 6.4.2 (Public-facing web applications protected against attacks). Crucial for protecting against web-based attacks."
         }
       },
       "data-classification": "RESTRICTED"
@@ -52,6 +58,24 @@
               "requirement-url": "https://owasp.org/www-project-api-security/"
             }
           ]
+        },
+        "multi-factor-authentication": {
+          "description": "Addresses PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication). Critically missing MFA for administrative access fails these controls."
+        },
+        "role-based-access-control": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.1 (Logical access security software, infrastructure, architectures) and CC6.3 (Role-based access and least privilege). Lack of granular access control fails these requirements."
+        },
+        "privileged-access-management": {
+          "description": "Addresses SOX 404 ITGC Access Controls (Privileged Access Management) for critical financial systems. Enhances security by controlling and auditing elevated access."
+        },
+        "secure-configuration-management": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Critical for reducing attack surface and maintaining system integrity."
+        },
+        "web-application-firewall": {
+          "description": "Addresses PCI-DSS 4.0 Req 6.4.2 (Public-facing web applications protected against attacks). Crucial for protecting against web-based attacks."
+        },
+        "secrets-management-service": {
+          "description": "Addresses CCC-CIS-06 (Secrets management) and NIST CSF 2.0 PR.AA-01 (Identities and credentials managed). Strengthens the protection of sensitive credentials beyond basic authentication."
         }
       }
     },
@@ -84,6 +108,24 @@
               "requirement-url": "https://www.pcisecuritystandards.org/document_library?category=pcidss&document=pci_dss"
             }
           ]
+        },
+        "multi-factor-authentication": {
+          "description": "Addresses PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication). Critically missing MFA for administrative access fails these controls."
+        },
+        "role-based-access-control": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.1 (Logical access security software, infrastructure, architectures) and CC6.3 (Role-based access and least privilege). Lack of granular access control fails these requirements."
+        },
+        "privileged-access-management": {
+          "description": "Addresses SOX 404 ITGC Access Controls (Privileged Access Management) for critical financial systems. Enhances security by controlling and auditing elevated access."
+        },
+        "backup-recovery-procedures": {
+          "description": "Addresses SOX 404 ITGC (Backup and Recovery), NIST CSF 2.0 PR.DS-11 (Data backups maintained, tested, and documented), and SOC2 TSC A1.3 (Recovery plan procedures established and tested). Essential for business continuity and data integrity."
+        },
+        "secure-configuration-management": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Critical for reducing attack surface and maintaining system integrity."
+        },
+        "secrets-management-service": {
+          "description": "Addresses CCC-CIS-06 (Secrets management) and NIST CSF 2.0 PR.AA-01 (Identities and credentials managed). Strengthens the protection of sensitive credentials beyond basic authentication."
         }
       },
       "data-classification": "RESTRICTED"
@@ -101,6 +143,24 @@
               "requirement-url": "https://www.iso.org/standard/54534.html"
             }
           ]
+        },
+        "multi-factor-authentication": {
+          "description": "Addresses PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication). Critically missing MFA for administrative access fails these controls."
+        },
+        "role-based-access-control": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.1 (Logical access security software, infrastructure, architectures) and CC6.3 (Role-based access and least privilege). Lack of granular access control fails these requirements."
+        },
+        "data-encryption-at-rest": {
+          "description": "Addresses 'Top Risk Finding: Limited data protection controls'. Essential for protecting confidential data in compliance with general data protection principles."
+        },
+        "data-encryption-in-transit": {
+          "description": "Addresses 'Top Risk Finding: Limited data protection controls'. Essential for protecting confidential data in transit, complementing existing HTTPS/TLS where applicable."
+        },
+        "access-logging-detailed": {
+          "description": "Addresses 'Top Risk Finding: Limited data protection controls and insufficient logging'. Essential for audit trails and incident investigation for confidential data."
+        },
+        "data-retention-policy-fraud-detection": {
+          "description": "Addresses 'Top Risk Finding: Limited data protection controls'. Essential for minimizing data exposure and complying with data privacy regulations."
         }
       },
       "data-classification": "CONFIDENTIAL"
@@ -134,6 +194,24 @@
               "requirement-url": "https://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=data%20retention"
             }
           ]
+        },
+        "multi-factor-authentication": {
+          "description": "Addresses PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication). Critically missing MFA for administrative access fails these controls."
+        },
+        "role-based-access-control": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.1 (Logical access security software, infrastructure, architectures) and CC6.3 (Role-based access and least privilege). Lack of granular access control fails these requirements."
+        },
+        "privileged-access-management": {
+          "description": "Addresses SOX 404 ITGC Access Controls (Privileged Access Management) for critical financial systems. Enhances security by controlling and auditing elevated access."
+        },
+        "extended-data-retention-policy": {
+          "description": "The existing 'data-retention' control's 3-year period for transaction records is insufficient for SOX (SEC Rule 17a-4, typically 7 years) and the absence of specific audit log retention fails PCI-DSS 4.0 Req 10.5.1 (Audit log history retained for 12 months). This control ensures compliance with stricter regulatory requirements."
+        },
+        "backup-recovery-procedures": {
+          "description": "Addresses SOX 404 ITGC (Backup and Recovery), NIST CSF 2.0 PR.DS-11 (Data backups maintained, tested, and documented), and SOC2 TSC A1.3 (Recovery plan procedures established and tested). Essential for business continuity and data integrity."
+        },
+        "secure-configuration-management": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Critical for reducing attack surface and maintaining system integrity."
         }
       },
       "data-classification": "CONFIDENTIAL"
@@ -143,7 +221,12 @@
       "node-type": "system",
       "name": "Card Network",
       "description": "External card network (Visa/Mastercard) for authorization and settlement",
-      "data-classification": "RESTRICTED"
+      "data-classification": "RESTRICTED",
+      "controls": {
+        "third-party-risk-management": {
+          "description": "Addresses NIST CSF 2.0 GV.SC-02 (Cybersecurity supply chain risk management established). Mitigates risks from external dependencies."
+        }
+      }
     },
     {
       "unique-id": "cardholder-data",
@@ -158,6 +241,9 @@
               "requirement-url": "https://www.pcisecuritystandards.org/document_library?category=pcidss&document=pci_dss"
             }
           ]
+        },
+        "data-residency-documentation": {
+          "description": "Addresses CCC-DPP-06 (Data residency and sovereignty controls). Essential for compliance with data protection regulations and demonstrating control over data location."
         }
       },
       "data-classification": "RESTRICTED"
@@ -294,5 +380,46 @@
         }
       ]
     }
-  ]
+  ],
+  "controls": {
+    "change-management-process": {
+      "description": "Addresses SOX 404 ITGC (Change Management) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Lack of formal change control poses a critical risk to financial reporting integrity."
+    },
+    "incident-response-plan": {
+      "description": "Addresses SOX 404 ITGC (Incident Management), PCI-DSS 4.0 Req 12.10.1 (Incident response plan established and maintained), NIST CSF 2.0 RS.MA-01 (Incident response plan executed), and SOC2 TSC CC7.4 (Security incidents identified and reported). A critical control for maintaining security posture and regulatory compliance."
+    },
+    "network-segmentation-cde": {
+      "description": "Addresses PCI-DSS 4.0 Req 1.2.1 (Define and understand inbound/outbound traffic rules), NIST CSF 2.0 PR.IR-01 (Networks and environments are protected), and SOC2 TSC CC6.6 (Logical access security measures protect against external threats). Essential for protecting cardholder data by limiting the scope of CDE."
+    },
+    "centralized-log-management-retention": {
+      "description": "Addresses PCI-DSS 4.0 Req 10.5.1 (Audit log history retained for 12 months). Essential for forensic analysis, incident response, and regulatory compliance."
+    },
+    "vulnerability-scanning": {
+      "description": "Addresses PCI-DSS 4.0 Req 11.3.1 (Internal vulnerability scans performed quarterly) and NIST CSF 2.0 ID.RA-01 (Vulnerabilities identified, validated, recorded). Critical for proactive identification and remediation of security weaknesses."
+    },
+    "penetration-testing-annual": {
+      "description": "Addresses PCI-DSS 4.0 Req 11.4.1 (External penetration testing performed annually) and NIST CSF 2.0 ID.RA-01 (Vulnerabilities identified, validated, recorded). Essential for robust security validation."
+    },
+    "intrusion-detection-prevention": {
+      "description": "Addresses PCI-DSS 4.0 Req 11.5.1 (Intrusion-detection techniques detect intrusions), NIST CSF 2.0 DE.CM-01 (Networks monitored for anomalous behavior), and SOC2 TSC CC7.1 (Infrastructure components monitored to detect anomalies). Crucial for real-time threat detection and response."
+    },
+    "organizational-security-policy": {
+      "description": "Addresses NIST CSF 2.0 GV.PO-01 (Cybersecurity policy established and communicated). A foundational control for a robust cybersecurity program."
+    },
+    "risk-management-process": {
+      "description": "Addresses NIST CSF 2.0 GV.RM-01 (Risk management objectives established and communicated). Essential for informed decision-making regarding cybersecurity investments and priorities."
+    },
+    "mission-aligned-cybersecurity-strategy": {
+      "description": "Addresses NIST CSF 2.0 GV.OC-01 (Organizational mission understood and informs cybersecurity). Crucial for establishing context and ensuring cybersecurity efforts support business goals."
+    },
+    "malware-protection": {
+      "description": "Addresses NIST CSF 2.0 DE.CM-04 (Malicious code detected) and SOC2 TSC CC7.2 (Malicious software detected and addressed). Essential for protecting systems from malware infections."
+    },
+    "disaster-recovery-plan": {
+      "description": "Addresses NIST CSF 2.0 RC.RP-01 (Recovery plan executed). Crucial for ensuring business continuity."
+    },
+    "secure-sdlc": {
+      "description": "Addresses PCI-DSS 4.0 Req 6.2.4 (Software engineering techniques prevent vulnerabilities) and related CCC recommendations. Essential for proactively identifying and remediating vulnerabilities in custom code."
+    }
+  }
 }
