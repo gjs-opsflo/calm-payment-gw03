@@ -33,6 +33,15 @@
         },
         "web-application-firewall": {
           "description": "Addresses PCI-DSS 4.0 Req 6.4.2 (Public-facing web applications protected against attacks). Crucial for protecting against web-based attacks."
+        },
+        "sox-data-integrity-input-validation": {
+          "description": "Supplements existing client-side validation to address SOX 404 ITGC Data Management (Data Integrity), ensuring accuracy and completeness of financial data from the point of entry."
+        },
+        "pci-cde-traffic-rules-checkout": {
+          "description": "Addresses PCI-DSS 4.0 Req 1.2.1 (Define and understand inbound/outbound traffic rules) and CCC-NET-01 (Network segmentation between trust zones) by providing explicit traffic rules for CDE components. This remediates the insufficient detail in the existing global network segmentation control."
+        },
+        "pci-secure-config-baselines-checkout": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) by mandating explicit secure configuration baselines and processes. This remediates the insufficient detail and enforceability of existing secure configuration controls."
         }
       },
       "data-classification": "RESTRICTED"
@@ -76,6 +85,24 @@
         },
         "secrets-management-service": {
           "description": "Addresses CCC-CIS-06 (Secrets management) and NIST CSF 2.0 PR.AA-01 (Identities and credentials managed). Strengthens the protection of sensitive credentials beyond basic authentication."
+        },
+        "sox-mfa-admin-access-payment-api": {
+          "description": "To address the critical deficiency where existing MFA was missing for administrative access. This explicitly implements MFA per SOX 404 Access Controls (User Authentication), PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication)."
+        },
+        "pci-cde-traffic-rules-payment-api": {
+          "description": "Addresses PCI-DSS 4.0 Req 1.2.1 (Define and understand inbound/outbound traffic rules) and CCC-NET-01 (Network segmentation between trust zones) by providing explicit traffic rules for CDE components. This remediates the insufficient detail in the existing global network segmentation control."
+        },
+        "pci-secure-config-baselines-payment-api": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) by mandating explicit secure configuration baselines and processes. This remediates the insufficient detail and enforceability of existing secure configuration controls."
+        },
+        "pci-granular-rbac-least-privilege-payment-api": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.3 (Role-based access and least privilege) by implementing granular access controls. This remediates the stated lack of granular access control."
+        },
+        "ccc-api-key-lifecycle-management": {
+          "description": "Addresses CCC-IAM-05 (Service account and API key management) by ensuring robust lifecycle management for API keys. This remediates the partial implementation of API key management and strengthens protection beyond basic authentication."
+        },
+        "ccc-full-secrets-management-payment-api": {
+          "description": "Addresses CCC-CIS-06 (Secrets management) and NIST CSF 2.0 PR.AA-01 (Identities and credentials managed) by mandating full implementation of a robust secrets management service. This remediates the partial status and strengthens protection of sensitive credentials."
         }
       }
     },
@@ -126,6 +153,21 @@
         },
         "secrets-management-service": {
           "description": "Addresses CCC-CIS-06 (Secrets management) and NIST CSF 2.0 PR.AA-01 (Identities and credentials managed). Strengthens the protection of sensitive credentials beyond basic authentication."
+        },
+        "sox-mfa-admin-access-tokenization": {
+          "description": "To address the critical deficiency where existing MFA was missing for administrative access. This explicitly implements MFA per SOX 404 Access Controls (User Authentication), PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication)."
+        },
+        "pci-cde-traffic-rules-tokenization-service": {
+          "description": "Addresses PCI-DSS 4.0 Req 1.2.1 (Define and understand inbound/outbound traffic rules) and CCC-NET-01 (Network segmentation between trust zones) by providing explicit traffic rules for CDE components. This remediates the insufficient detail in the existing global network segmentation control."
+        },
+        "pci-secure-config-baselines-tokenization-service": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) by mandating explicit secure configuration baselines and processes. This remediates the insufficient detail and enforceability of existing secure configuration controls."
+        },
+        "pci-granular-rbac-least-privilege-tokenization-service": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.3 (Role-based access and least privilege) by implementing granular access controls. This remediates the stated lack of granular access control."
+        },
+        "ccc-full-secrets-management-tokenization-service": {
+          "description": "Addresses CCC-CIS-06 (Secrets management) and NIST CSF 2.0 PR.AA-01 (Identities and credentials managed) by mandating full implementation of a robust secrets management service. This remediates the partial status and strengthens protection of sensitive credentials."
         }
       },
       "data-classification": "RESTRICTED"
@@ -161,6 +203,21 @@
         },
         "data-retention-policy-fraud-detection": {
           "description": "Addresses 'Top Risk Finding: Limited data protection controls'. Essential for minimizing data exposure and complying with data privacy regulations."
+        },
+        "sox-mfa-admin-access-fraud-detection": {
+          "description": "To address the critical deficiency where existing MFA was missing for administrative access. This explicitly implements MFA per SOX 404 Access Controls (User Authentication), PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication)."
+        },
+        "pci-cde-traffic-rules-fraud-detection": {
+          "description": "Addresses PCI-DSS 4.0 Req 1.2.1 (Define and understand inbound/outbound traffic rules), NIST CSF 2.0 PR.IR-01 (Networks and environments are protected), and SOC2 TSC CC6.6 (Logical access security measures protect against external threats) by ensuring granular network controls for services handling sensitive data."
+        },
+        "pci-granular-rbac-least-privilege-fraud-detection": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.3 (Role-based access and least privilege) by implementing granular access controls. This remediates the stated lack of granular access control."
+        },
+        "fraud-data-encryption-enhancement": {
+          "description": "Addresses the 'Top Risk Finding: Limited data protection controls' by explicitly strengthening data encryption in transit and at rest for the Fraud Detection service, aligning with PCI-DSS, NIST CSF, and CCC data protection principles."
+        },
+        "fraud-enhanced-access-logging": {
+          "description": "Addresses the 'Top Risk Finding: Insufficient logging' by explicitly strengthening access logging in the Fraud Detection service to provide robust audit trails for confidential data processing, aligning with PCI-DSS 4.0 Req 10.5.1 and general audit requirements."
         }
       },
       "data-classification": "CONFIDENTIAL"
@@ -212,6 +269,27 @@
         },
         "secure-configuration-management": {
           "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Critical for reducing attack surface and maintaining system integrity."
+        },
+        "sox-mfa-admin-access-transaction-db": {
+          "description": "To address the critical deficiency where existing MFA was missing for administrative access. This explicitly implements MFA per SOX 404 Access Controls (User Authentication), PCI-DSS 4.0 Req 8.4.2 (MFA for all access into CDE), NIST CSF 2.0 PR.AA-03 (users, services, hardware authenticated), and SOC2 TSC CC6.5 (Logical access restricted using multi-factor authentication)."
+        },
+        "sox-extended-data-retention": {
+          "description": "Addresses the partial compliance of existing data retention policies. SOX 404 Data Management (Data Retention) and SEC Rule 17a-4 require financial records to be retained for typically 7 years, which the prior 3-year policy failed to meet."
+        },
+        "sox-data-integrity-db": {
+          "description": "Addresses SOX 404 ITGC Data Management (Data Integrity) by ensuring the accuracy and completeness of financial data at rest and during processing. This is critical for reliable financial reporting."
+        },
+        "pci-cde-traffic-rules-transaction-database": {
+          "description": "Addresses PCI-DSS 4.0 Req 1.2.1 (Define and understand inbound/outbound traffic rules) and CCC-NET-01 (Network segmentation between trust zones) by providing explicit traffic rules for CDE components. This remediates the insufficient detail in the existing global network segmentation control."
+        },
+        "pci-secure-config-baselines-transaction-database": {
+          "description": "Addresses PCI-DSS 4.0 Req 2.X (Apply Secure Configurations to All System Components) by mandating explicit secure configuration baselines and processes. This remediates the insufficient detail and enforceability of existing secure configuration controls."
+        },
+        "pci-granular-rbac-least-privilege-transaction-database": {
+          "description": "Addresses PCI-DSS 4.0 Req 7.2 (Access to system components restricted per least privilege), NIST CSF 2.0 PR.AA-05 (Access permissions, entitlements, authorizations managed), and SOC2 TSC CC6.3 (Role-based access and least privilege) by implementing granular access controls. This remediates the stated lack of granular access control."
+        },
+        "pci-audit-log-retention": {
+          "description": "Addresses PCI-DSS 4.0 Req 10.5.1 (Audit log history retained for 12 months) and the 'Top Risk Finding: Insufficient data retention policies' by explicitly mandating 12-month retention for audit logs in the transaction database."
         }
       },
       "data-classification": "CONFIDENTIAL"
@@ -221,12 +299,12 @@
       "node-type": "system",
       "name": "Card Network",
       "description": "External card network (Visa/Mastercard) for authorization and settlement",
-      "data-classification": "RESTRICTED",
       "controls": {
         "third-party-risk-management": {
           "description": "Addresses NIST CSF 2.0 GV.SC-02 (Cybersecurity supply chain risk management established). Mitigates risks from external dependencies."
         }
-      }
+      },
+      "data-classification": "RESTRICTED"
     },
     {
       "unique-id": "cardholder-data",
@@ -342,45 +420,6 @@
       }
     }
   ],
-  "flows": [
-    {
-      "unique-id": "payment-processing-flow",
-      "name": "Payment Processing Flow",
-      "description": "Complete payment flow from customer card entry through authorization",
-      "transitions": [
-        {
-          "relationship-unique-id": "customer-to-checkout",
-          "sequence-number": 1,
-          "description": "Customer enters card details on checkout page"
-        },
-        {
-          "relationship-unique-id": "checkout-to-payment-api",
-          "sequence-number": 2,
-          "description": "Checkout submits encrypted payment to API"
-        },
-        {
-          "relationship-unique-id": "payment-api-to-fraud",
-          "sequence-number": 3,
-          "description": "Payment API checks fraud score"
-        },
-        {
-          "relationship-unique-id": "payment-api-to-tokenization",
-          "sequence-number": 4,
-          "description": "Payment API requests tokenization"
-        },
-        {
-          "relationship-unique-id": "tokenization-to-card-network",
-          "sequence-number": 5,
-          "description": "Tokenization service authorizes with card network"
-        },
-        {
-          "relationship-unique-id": "payment-api-to-db",
-          "sequence-number": 6,
-          "description": "Payment API records transaction"
-        }
-      ]
-    }
-  ],
   "controls": {
     "change-management-process": {
       "description": "Addresses SOX 404 ITGC (Change Management) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). Lack of formal change control poses a critical risk to financial reporting integrity."
@@ -420,6 +459,84 @@
     },
     "secure-sdlc": {
       "description": "Addresses PCI-DSS 4.0 Req 6.2.4 (Software engineering techniques prevent vulnerabilities) and related CCC recommendations. Essential for proactively identifying and remediating vulnerabilities in custom code."
+    },
+    "sox-access-review": {
+      "description": "Addresses SOX 404 Access Controls (Access Reviews) which requires periodic review of user access rights, a key component of SOX ITGCs. This control ensures continued adherence to least privilege and appropriate access levels."
+    },
+    "sox-termination-access-revocation": {
+      "description": "Addresses SOX 404 Access Controls (Termination Procedures) which requires immediate revocation of access for terminated employees. This is crucial for preventing unauthorized access and maintaining data security."
+    },
+    "sox-job-scheduling-monitoring": {
+      "description": "Addresses SOX 404 ITGC Operations (Job Scheduling and Monitoring) which requires explicit controls over automated batch processes and error handling for tasks impacting financial reporting. This ensures accuracy and reliability of financial data processing."
+    },
+    "sox-capacity-planning": {
+      "description": "Addresses SOX 404 ITGC Operations (Capacity Planning) which requires demonstrating systems can handle expected transaction volumes. Essential for maintaining system availability and integrity of financial operations."
+    },
+    "sox-sdlc-code-review": {
+      "description": "Addresses SOX 404 ITGC Software Development (Code Review) by explicitly requiring code review to identify and remediate vulnerabilities before deployment, enhancing the security and integrity of financial systems."
+    },
+    "sox-sdlc-version-control": {
+      "description": "Addresses SOX 404 ITGC Software Development (Version Control) by requiring robust version control systems with an audit trail for source code. This ensures traceability and integrity of software changes affecting financial systems."
+    },
+    "sox-sdlc-release-management": {
+      "description": "Addresses SOX 404 ITGC Software Development (Release Management) by requiring a controlled and approved process for code promotion to production. This enhances the integrity and stability of financial systems and aligns with the existing 'change-management-process' control."
+    },
+    "pci-enhanced-secure-sdlc": {
+      "description": "Addresses PCI-DSS 4.0 Req 6.2.4 (Software engineering techniques prevent vulnerabilities) by providing specific details on implemented secure software engineering techniques. This improves proactive vulnerability identification and remediation."
+    },
+    "nist-mission-cybersecurity-alignment": {
+      "description": "Addresses NIST CSF 2.0 GV.OC-01 (Organizational mission understood and informs cybersecurity) by requiring explicit documentation of this alignment. This remediates the lack of demonstrating how the mission informs cybersecurity beyond merely stating the control's existence."
+    },
+    "soc2-cde-logical-access-security": {
+      "description": "Addresses SOC2 TSC CC6.1 (Logical access security software, infrastructure, architectures) and SOC2 TSC CC6.6 (Logical access security measures protect against external threats) by mandating comprehensive logical access security for the CDE. This remediates the stated lack of granular access control and insufficient protection against external threats."
+    },
+    "soc2-user-registration-authorization": {
+      "description": "Addresses SOC2 TSC CC6.2 (New internal and external users registered and authorized) by establishing formal processes for user access, a critical component of logical access security."
+    },
+    "soc2-capacity-usage-monitoring": {
+      "description": "Addresses SOC2 TSC A1.1 (Current processing capacity and usage monitored) by implementing architecture-wide monitoring for capacity and usage. This enhances service availability and operational oversight."
+    },
+    "sox-formal-change-management": {
+      "description": "Addresses the critical deficiency in formal change management per SOX 404 ITGC (Change Management) and NIST CSF 2.0 PR.PS-01 (Configuration management practices established). This ensures controlled and auditable changes to critical financial systems."
     }
-  }
+  },
+  "flows": [
+    {
+      "unique-id": "payment-processing-flow",
+      "name": "Payment Processing Flow",
+      "description": "Complete payment flow from customer card entry through authorization",
+      "transitions": [
+        {
+          "relationship-unique-id": "customer-to-checkout",
+          "sequence-number": 1,
+          "description": "Customer enters card details on checkout page"
+        },
+        {
+          "relationship-unique-id": "checkout-to-payment-api",
+          "sequence-number": 2,
+          "description": "Checkout submits encrypted payment to API"
+        },
+        {
+          "relationship-unique-id": "payment-api-to-fraud",
+          "sequence-number": 3,
+          "description": "Payment API checks fraud score"
+        },
+        {
+          "relationship-unique-id": "payment-api-to-tokenization",
+          "sequence-number": 4,
+          "description": "Payment API requests tokenization"
+        },
+        {
+          "relationship-unique-id": "tokenization-to-card-network",
+          "sequence-number": 5,
+          "description": "Tokenization service authorizes with card network"
+        },
+        {
+          "relationship-unique-id": "payment-api-to-db",
+          "sequence-number": 6,
+          "description": "Payment API records transaction"
+        }
+      ]
+    }
+  ]
 }
