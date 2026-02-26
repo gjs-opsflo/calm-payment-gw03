@@ -1,0 +1,25 @@
+rules:
+  - id: sql-injection
+    patterns:
+      - pattern-regex: '\(SELECT|INSERT|UPDATE|DELETE|UNION ALL|DROP TABLE|CREATE TABLE|ALTER TABLE)'
+      - metavariable: $INPUT
+        pattern: '$VAR'
+    message: 'SQL Injection vulnerability detected. (PCI-DSS 6.5.1)'
+    languages: [javascript, python, java, go]
+    severity: ERROR
+  - id: xss-vulnerability
+    patterns:
+      - pattern-regex: '(?i)(<script|javascript:|onmouseover=)'
+      - metavariable: $OUTPUT
+        pattern: '$VAR'
+    message: 'Cross-Site Scripting (XSS) vulnerability detected. (PCI-DSS 6.5.1)'
+    languages: [javascript, go]
+    severity: ERROR
+  - id: insecure-cryptography
+    patterns:
+      - pattern-either:
+        - pattern-regex: '(?i)(MD5|SHA1)'
+        - pattern: 'AES.CBC'
+    message: 'Insecure cryptographic algorithm detected. (PCI-DSS 3.4)'
+    languages: [javascript, python, java, go]
+    severity: WARNING
